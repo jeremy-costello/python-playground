@@ -34,4 +34,5 @@ https://docs.python.org/3/library/threading.html#threading.Lock
 https://docs.python.org/3.14/library/concurrent.futures.html#module-concurrent.futures
 https://docs.python.org/3.14/library/concurrent.interpreters.html#module-concurrent.interpreters
 https://docs.python.org/3.14/library/threading.html#module-threading
+https://docs.python.org/3.14/whatsnew/3.14.html#whatsnew314-jit-compiler
 
