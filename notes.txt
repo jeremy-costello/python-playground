@@ -1,0 +1,36 @@
+== INITIALIZING WITH UV
+
+REPO=python-playground
+
+on github:
+- new repo
+  - no gitignore
+
+CLI:
+uv init $REPO
+cd $REPO
+rm README.md
+git remote add origin https://github.com/$USER/$REPO.git
+git pull origin main
+git checkout main
+( uv python install X.XX[t] )
+uv python pin X.XX[t]
+uv venv --python X.XX[t]
+source .venv/bin/activate
+
+== ADDING DEPENDENCIES
+uv add ruff
+uv lock
+uv sync
+
+== PUSHING TO GIT
+git add .
+git commit -m "$MESSAGE"
+git push origin main
+
+== MULTI-THREAD & MULTI-INTERPRETER
+https://docs.python.org/3/howto/free-threading-python.html
+https://docs.python.org/3/library/threading.html#threading.Lock
+https://docs.python.org/3.14/library/concurrent.futures.html#module-concurrent.futures
+https://docs.python.org/3.14/library/concurrent.interpreters.html#module-concurrent.interpreters
+
