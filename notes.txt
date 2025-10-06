@@ -36,3 +36,7 @@ https://docs.python.org/3.14/library/concurrent.interpreters.html#module-concurr
 https://docs.python.org/3.14/library/threading.html#module-threading
 https://docs.python.org/3.14/whatsnew/3.14.html#whatsnew314-jit-compiler
 
+== LEARNING MULTI-THREADING
+https://begriffs.com/posts/2020-03-23-concurrent-programming.html
+https://www.youtube.com/playlist?list=PLfqABt5AS4FmuQf70psXrsMLEDQXNkLq2
+https://docs.python.org/3/library/threading.html
