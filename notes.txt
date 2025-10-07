@@ -28,6 +28,9 @@ git add .
 git commit -m "$MESSAGE"
 git push origin main
 
+== UPDATING UV
+uv self update
+
 == MULTI-THREAD & MULTI-INTERPRETER
 https://docs.python.org/3/howto/free-threading-python.html
 https://docs.python.org/3/library/threading.html#threading.Lock
