@@ -4,7 +4,7 @@
 from dataclasses import dataclass
 from os import sched_yield
 from random import randrange
-from threading import Thread, Lock
+from threading import Thread, RLock
 from timeit import timeit
 
 
@@ -18,7 +18,7 @@ N_TIMEIT_RUNS = 10
 @dataclass
 class Account:
     balance: int
-    lock: Lock | None
+    lock: RLock | None
 
 
 accts: list[Account] = [
@@ -64,7 +64,7 @@ def main(
 ) -> None:
     for acct in accts:
         acct.balance = INIT_BALANCE
-        acct.lock = Lock()
+        acct.lock = RLock()
     
     if print_outputs:
         print(f"Initial money in system: {N_ACCOUNTS * INIT_BALANCE}")
