@@ -13,6 +13,7 @@ rm README.md
 git remote add origin https://github.com/$USER/$REPO.git
 git pull origin main
 git checkout main
+manually change requires-python in pyproject.toml to ">=X.XX[t?]" || not sure if there's a better way to do this
 ( uv python install X.XX[t] )
 uv python pin X.XX[t]
 uv venv --python X.XX[t]

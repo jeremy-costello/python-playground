@@ -3,7 +3,7 @@
 
 from dataclasses import dataclass
 from random import randrange
-from threading import Thread, RLock, Condition
+from threading import Thread, Lock, Condition
 from timeit import timeit
 
 
@@ -17,7 +17,7 @@ N_TIMEIT_RUNS = 10
 @dataclass
 class Account:
     balance: int
-    lock: RLock | None
+    lock: Lock | None
 
 
 accts: list[Account] = [
@@ -85,7 +85,7 @@ def main(
 ) -> None:
     for acct in accts:
         acct.balance = INIT_BALANCE
-        acct.lock = RLock()
+        acct.lock = Lock()
     
     if print_outputs:
         print(f"Initial money in system: {N_ACCOUNTS * INIT_BALANCE}")
